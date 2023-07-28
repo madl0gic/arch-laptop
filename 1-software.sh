@@ -1,5 +1,9 @@
 #!/bin/bash
 
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
 PKGS=(
     # Section 1: Xorg and Window Manager
     'xorg'                   # Display server
@@ -14,7 +18,7 @@ PKGS=(
     'xbindkeys'              # Keyboard binding configuration
 
     # Section 2: Window Manager Tools
-    # 'brightnessctl'          # Backlight control
+    'brightnessctl'          # Backlight control
     'i3-gaps'                # Tiling window manager
     'rofi'                   # Application launcher
     'dmenu'                  # Dynamic menu
@@ -62,8 +66,8 @@ PKGS=(
 
     # Section 7: Sound and Audio
     'pulseaudio'             # Sound server
-    # 'pulseaudio-bluetooth'   # Bluetooth sound server
-    # 'pulseaudio-alsa'        # Sound server
+    'pulseaudio-bluetooth'   # Bluetooth sound server
+    'pulseaudio-alsa'        # Sound server
     'alsa-utils'             # Sound utilities
     'pavucontrol'            # Sound mixer
 
@@ -80,9 +84,9 @@ PKGS=(
     'file-roller'            # Archive manager
 
     # Section 11: Bluetooth and Printer
-    # 'bluez'                  # Bluetooth stack utilities
-    # 'bluez-utils'            # Bluetooth stack utilities
-    # 'blueman'                # Bluetooth manager
+    'bluez'                  # Bluetooth stack utilities
+    'bluez-utils'            # Bluetooth stack utilities
+    'blueman'                # Bluetooth manager
     'cups'                   # Printing system
     'simple-scan'            # Document scanner
 
@@ -101,11 +105,11 @@ PKGS=(
     'jdk-openjdk'            # Java Development Kit
 
     # Section 14: Drivers
-    'nvidia'
+    # 'nvidia'
     # 'xf86-input-libinput'
     # 'xf86-input-evdev'
     # 'xf86-video-fbdev'
-    # 'xf86-video-intel'
+    'xf86-video-intel'
     # 'xf86-video-nouveau'
     # 'xf86-video-vmware'
 )
@@ -116,4 +120,10 @@ for PKG in "${PKGS[@]}"; do
 done
 
 sudo systemctl enable cups
-# sudo systemctl enable bluetooth
+sudo systemctl enable bluetooth
+
+# Media player
+yay -S  mpv --noconfirm
+
+# Video-sharing websites playback
+yay -S yt-dlp  --noconfirm
