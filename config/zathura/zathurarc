@@ -1,0 +1,38 @@
+# zathurarc
+set scroll-step 120
+
+# colors
+set statusbar-bg "#65D1FF"
+set statusbar-fg black
+
+# settings
+set window-height 1024
+set window-width 768
+set adjust-open width
+
+# use sqlite as bookmarks database backend
+set database sqlite
+
+# key bindings
+map <PageUp> navigate previous
+map <PageDown> navigate next
+
+map + zoom in
+map - zoom out
+map r reload
+map p print
+map R rotate
+unmap <C-f>
+map <C-f> toggle_fullscreen
+map [fullscreen] <C-f> toggle_fullscreen
+
+map <C-q> quit
+
+# Navigation
+map j scroll down
+map k scroll up
+map h scroll left
+map l scroll right
+
+set selection-clipboard clipboard
+set sandbox none
