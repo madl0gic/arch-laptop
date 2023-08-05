@@ -2,7 +2,7 @@ super + shift + h
   zathura "$HOME/.config/guide.pdf"
 
 alt + x
-  kitty -e "ranger" /mnt/FILES/Watch
+  kitty -e "vifm" ~/Documents/Watch
 
 alt + c
 	kitty -e ~/.config/scripts/conf.sh
@@ -14,16 +14,16 @@ alt + shift + o
 	 ~/.config/scripts/c/old_project.sh
 
 alt + s
-	feh -F "/mnt/FILES/My_Stuff/schedule.png"
+	feh -F "~/Documents/My_Stuff/schedule.png"
 
 alt + b 
 	~/.config/scripts/bookmarks.sh
 
 alt + h 
-	/mnt/FILES/My_Stuff/home-server.sh
+	~/Documents/My_Stuff/home-server.sh
 
 alt + l
-	/mnt/FILES/My_Stuff/mytodo/todo
+	~/Documents/My_Stuff/mytodo/todo
 
 alt + y 
 	~/.config/scripts/mpv-youtube.sh
@@ -32,7 +32,7 @@ alt + u
 	~/.config/scripts/usb_mount.sh
 
 alt + d 
-  kitty --class KittySftp -e ~/.config/scripts/yt-downloader.sh
+	kitty --class KittySftp -e ~/.config/scripts/yt-downloader.sh
 
 alt + shift + y
 	sudo /home/zed/.config/scripts/web_blocker.sh
@@ -41,10 +41,10 @@ alt + z
 	~/.config/scripts/bookmark_pdf.sh
 
 alt + m 
-	/mnt/FILES/My_Stuff/sftp_m.sh
+	~/Documents/My_Stuff/sftp_m.sh
 
 alt + t 
-	/mnt/FILES/My_Stuff/sftp_s.sh
+	~/Documents/My_Stuff/sftp_s.sh
 
 alt + p 
   pavucontrol
@@ -53,9 +53,6 @@ alt + p
 F1
 	~/.config/scripts/wallpaper-single-display.sh
 
-F2
-	~/.config/scripts/wallpaper-double-display.sh
-
 # Programs
 super + Return
 	kitty
@@ -63,11 +60,8 @@ super + Return
 super + p
   rofi -show drun -line padding 4 -hide-scrollbar -show-icons
    	
-super + r
-  kitty -e "ranger"
-
-super + s 
-  filezilla
+super + n
+  kitty -e "vifm" /home/zed/ ~/Documents/
 
 super + w 
   chromium

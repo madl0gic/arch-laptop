@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/$USER/Documents/My_Stuff/c_projects
+cd /mnt/FILES/My_Stuff/c_projects
 
 # List all directories in the current directory
 dirs=(*/)
@@ -32,5 +32,5 @@ if [ -f a.out ]; then
 fi
 clear
 # Compile and run main.c
-gcc -Wall -Wextra main.c
+gcc -Wall -Wextra -lm main.c
 ./a.out

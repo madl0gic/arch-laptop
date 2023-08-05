@@ -35,7 +35,7 @@ PKGS=(
     'ntfs-3g'                # Managing NTFS file systems
 
     # Section 3: File Managers
-    'ranger'                 # Terminal file manager
+    'vifm'                 # Terminal file manager
 
     # Section 4: System Utilities
     'network-manager-applet' # Network manager applet
@@ -49,10 +49,13 @@ PKGS=(
     'tmux'                   # Terminal multiplexer
     'openssh'                # Suite of secure networking utilities
     'rsync'                  # For transferring and synchronizing files
+    'fzf'                    # Fuzzy finder
+    'ghostscript'            # Interpreter for PostScript and PDF files
+    'pdftk'                  # Toolkit for manipulating PDFs
+    'imagemagick'            # Image manipulation software
 
     # Section 5: Image and Media Tools
     'feh'                    # Image viewer and wallpaper setter
-    'viewnior'               # Image viewer
     'flameshot'              # Screenshot tool
     'sxiv'                   # Image viewer
     'python-pillow'          # Image processing library
@@ -72,7 +75,6 @@ PKGS=(
     # Section 8: Development Tools
     'telegram-desktop'       # Messaging app
     'code'                   # Source code editor
-    'git'                    # Version control system
     'chromium'               # Web Browser
 
     # Section 9: Compression and Archive Tools
@@ -92,7 +94,7 @@ PKGS=(
     'galculator'             # Calculator
     'zathura-pdf-poppler'    # PDF viewer
     'qbittorrent'            # BitTorrent client
-    'filezilla'              # FTP application
+    'transmission-cli'       # command-line BitTorrent client
     'discord'                # Messaging and VoIP social platform
 
     # Section 13: Miscellaneous Utilities
@@ -117,9 +119,6 @@ for PKG in "${PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 
-sudo systemctl enable cups
-sudo systemctl enable bluetooth
-
 # Media player
 yay -S  mpv --noconfirm
 
@@ -128,3 +127,6 @@ yay -S yt-dlp  --noconfirm
 
 # MTP Android device mounting tool
 yay -S jmtpfs --noconfirm
+
+sudo systemctl enable cups
+sudo systemctl enable bluetooth
