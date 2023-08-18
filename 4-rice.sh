@@ -5,7 +5,7 @@ cd
 mkdir ~/.themes
 mkdir ~/.icons
 mkdir ~/phone_mount
-cd arch-z/theme
+cd arch-laptop/theme
 
 tar xf Sunity-cursors.tar.gz
 tar -xf Papirus-gray.tar.xz
@@ -16,7 +16,7 @@ cp -r Papirus-Dark ~/.icons
 cp -r Sunity-cursors/ ~/.icons/
 
 cd
-cd arch-z/
+cd arch-laptop/
 cp -r config/wallpapers/ ~/.config
 cp -r config/i3/ ~/.config
 cp -r config/sxhkd/ ~/.config
@@ -48,12 +48,12 @@ if [[ ! -d ~/.config/gtk-3.0 ]]; then
     sudo mkdir -p ~/.config/gtk-3.0
 fi
 
-cd arch-z/
+cd arch-laptop/
 sudo cp config/settings.ini ~/.config/gtk-3.0/
 cp config/.gtkrc-2.0 ~/
 -----------------------------------------------
 cd
-cd arch-z/
+cd arch-laptop/
 source optional/keyboard_layout.sh
 # source optional/terminal_in_pcmanfm.sh
 source optional/nvim.sh

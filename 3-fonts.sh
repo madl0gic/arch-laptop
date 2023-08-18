@@ -7,7 +7,7 @@ if [[ ! -d "$fonts_dir" ]]; then
 fi
 
 cd
-cd arch-z/fonts
+cd arch-laptop/fonts
 7z x Hack-NerdFont.7z
 7z x JetBrainsMono.7z
 mv *.ttf ~/.local/share/fonts
