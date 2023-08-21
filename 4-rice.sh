@@ -26,7 +26,8 @@ cp -r config/dunst/ ~/.config
 cp -r config/rofi/ ~/.config
 # cp -r config/ranger/ ~/.config
 cp -r config/vifm/ ~/.config
-cp -r config/polybar/ ~/.config
+# cp -r config/polybar/ ~/.config
+cp -r config/i3blocks/ ~/.config
 # cp -r config/pcmanfm/ ~/.config
 cp -r config/zathura/ ~/.config
 cp -r config/kitty/ ~/.config
