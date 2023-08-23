@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 target_directory="$HOME/Downloads/YT-DOWNLOADS"
