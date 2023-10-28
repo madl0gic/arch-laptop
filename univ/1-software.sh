@@ -38,8 +38,8 @@ PKGS=(
     # Section 6: Keybindings and Utilities
     'sxhkd'                  # X hotkey daemon
     'numlockx'               # Num Lock status control
-    'neovim'                 # hyperextensible Vim-based text editor
     'vim'                    # text editor
+    'geany'                  # text editor
     'mousepad'               # text editor
 
     # Section 7: Sound and Audio

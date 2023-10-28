@@ -1,6 +1,3 @@
-alt + c
-	kitty -e ~/.config/scripts/conf.sh
-
 alt + u 
 	~/.config/scripts/usb_mount.sh mount
 
@@ -16,7 +13,10 @@ super + Return
 
 super + p
   rofi -show drun -line padding 4 -hide-scrollbar -show-icons
-   	
+
+super + f
+  pcmanfm
+
 super + n
  kitty -e "vifm" /home/$USER/ /
 
@@ -24,7 +24,7 @@ super + w
   firefox
 
 super + c 
-	code-oss
+	geany
 
 alt + w
  	rofi -show

@@ -15,6 +15,7 @@ cp -r config/zathura/ ~/.config
 cp -r config/kitty/ ~/.config
 cp config/picom.conf ~/.config
 cp optional/.bashrc ~/
+cp optional/.vimrc ~/
 cp optional/.inputrc ~/
 cp config/.fehbg ~/
 chmod +x ~/.config/i3/autostart.sh
@@ -24,6 +25,4 @@ chmod +x ~/.config/i3/scripts/*
 cd
 cd univ/
 source optional/keyboard_layout.sh
-# source optional/nvim.sh
 source optional/default_apps.sh
-source optional/nvim-desktop.sh
