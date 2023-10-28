@@ -1,0 +1,18 @@
+# LightDM Autologin
+groupadd -r autologin
+gpasswd -a $USER autologin
+
+sudo vim /etc/lightdm/lightdm.conf
+[Seat:*]
+autologin-user=$USER
+----------------------------------
+# GRUB
+sudo vim /etc/default/grub
+GRUB_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT=0
+
+#arch
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+-----------------------------------
+usermod -l newUsername oldUsername
