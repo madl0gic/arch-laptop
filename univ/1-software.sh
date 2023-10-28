@@ -7,35 +7,40 @@ PKGS=(
     'dmenu'                  # Dynamic menu
     'i3blocks'               # Status bar
     'dunst'                  # Notification daemon
-    'libnotify'              # Notification library
+    'libnotify-bin'              # Notification library
     'picom'                  # Compositor
     'kitty'                  # Terminal emulator
     'lxappearance'           # GTK+ theme switcher
     'wget'                   # File downloader
     'polkit-gnome'           # PolicyKit authentication agent
-    'dosfstools'             # Managing FAT file systems
-    'ntfs-3g'                # Managing NTFS file systems
+    'dialog'
+    'mtools'
+    'dosfstools'
 
     # Section 3: File Managers
     'vifm'                   # Terminal file manager
-    'thunar'                 # File manager
+    'pcmanfm'                 # File manager
 
     # Section 4: System Utilities
     'network-manager-applet' # Network manager applet
     'gparted'                # Partition editor
+    'gnome-disk-utility'     # Partition editor
     'arandr'                 # Screen layout editor
     'htop'                   # System monitoring tool
-    'dbus'                   # Message bus system
+    'dbus-x11'                   # Message bus system
 
     # Section 5: Image and Media Tools
     'feh'                    # Image viewer and wallpaper setter
     'flameshot'              # Screenshot tool
     'sxiv'                   # Image viewer
+    'mpv'
 
     # Section 6: Keybindings and Utilities
     'sxhkd'                  # X hotkey daemon
     'numlockx'               # Num Lock status control
     'neovim'                 # hyperextensible Vim-based text editor
+    'vim'                    # text editor
+    'mousepad'               # text editor
 
     # Section 7: Sound and Audio
     'pulseaudio'             # Sound server
@@ -50,7 +55,7 @@ PKGS=(
 
     # Section 12: Other Tools and Libraries
     'galculator'             # Calculator
-    'zathura-pdf-poppler'    # PDF viewer
+    'zathura'    # PDF viewer
 
     # Section 13: Miscellaneous Utilities
     'xfce4-power-manager'    # Power manager
@@ -63,5 +68,5 @@ PKGS=(
 
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
-    sudo apt install -y "$PKG"
+    sudo apt-get install -y "$PKG"
 done
