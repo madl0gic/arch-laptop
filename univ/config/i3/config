@@ -31,8 +31,7 @@ bindsym $mod+q kill
 ######################################
 #    	 System keybindings
 
-bindsym $mod+Shift+b exec "reboot"
-bindsym $mod+Shift+s exec "shutdown now"
+bindsym $mod+Shift exec "sudo shutdown now"
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $alt+Shift+s layout stacking
