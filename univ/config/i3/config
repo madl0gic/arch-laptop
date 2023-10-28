@@ -12,8 +12,8 @@ exec --no-startup-id ~/.config/scripts/resolution.sh
 
 set $mod Mod4
 set $alt Mod1 
-set $g_inner 6
-set $g_outer 3
+# set $g_inner 6
+# set $g_outer 3
 smart_borders on
 ######################################
 #             Theme
@@ -21,26 +21,18 @@ smart_borders on
 
 font pango:DejaVu Sans Mono 10
 new_window 1pixel
-gaps inner $g_inner
-gaps outer $g_outer
+# gaps inner $g_inner
+# gaps outer $g_outer
 default_border pixel 3
 default_floating_border pixel 3
 floating_modifier $mod
 bindsym $mod+q kill
 
 ######################################
-#           	Gaps
-
-bindsym $mod+Shift+n 	gaps inner current set $g_inner; gaps outer current set $g_outer
-bindsym $mod+x		gaps outer current plus 5
-bindsym $mod+Shift+x	gaps outer current minus 5 
-bindsym $mod+z		gaps inner current plus 5
-bindsym $mod+Shift+z	gaps inner current minus 5
-######################################
 #    	 System keybindings
 
 bindsym $mod+Shift+b exec "reboot"
-bindsym $mod+Shift+s exec "poweroff"
+bindsym $mod+Shift+s exec "shutdown now"
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $alt+Shift+s layout stacking
@@ -48,7 +40,7 @@ bindsym $alt+Shift+t layout tabbed
 bindsym $alt+Shift+e layout toggle split
 
 # Browser
-bindsym $mod+w exec chromium
+bindsym $mod+w exec firefox
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
