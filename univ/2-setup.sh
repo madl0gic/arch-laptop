@@ -17,5 +17,5 @@ EOF
 sudo cp ./temp /usr/share/xsessions/i3.desktop;rm ./temp
 
 cd
-# touch .xinitrc
-# echo "exec i3" > .xinitrc
+touch .xinitrc
+echo "exec i3" > .xinitrc

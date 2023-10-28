@@ -14,7 +14,7 @@ super + Return
 super + p
   rofi -show drun -line padding 4 -hide-scrollbar -show-icons
 
-super + f
+super + t
   pcmanfm
 
 super + n
