@@ -149,9 +149,8 @@ mark h ~/
 "  %u uses command's output to build a file list
 "  see `:help vifm-macros` and `:help vifm-filename-modifiers` for more
 
-" command to collect the total duration (time) of a bunch of videos 
-command! flip convert %f -rotate 90 %f 
 command! v vim %c
+command! c geany %c
 command! df df -h %m 2> /dev/null
 command! diff vim -d %f %F
 command! zip zip -r %c.zip %f
@@ -483,12 +482,6 @@ fileviewer .*/ exa -a --colour=always --group-directories-first
 " ------------------------------------------------------------------------------
 " Sample keyboard mappings
 " ------------------------------------------------------------------------------
-
-" Run videos in the background 
-nnoremap m :play<cr>
-
-" Change "-" with "- [Watched]"
-nnoremap W :s?-?- [Watched] <cr>
 
 " Toggle hidden files
 nnoremap . za
