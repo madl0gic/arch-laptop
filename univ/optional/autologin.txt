@@ -1,3 +1,8 @@
+# GDM Autologin
+sudo vim /etc/gdm3/daemon.conf
+# or 
+sudo vim /etc/gdm/custom.conf
+
 # LightDM Autologin
 groupadd -r autologin
 gpasswd -a $USER autologin
