@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # sudo vim /usr/share/applications/nvim.desktop
