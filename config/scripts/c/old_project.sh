@@ -1,7 +1,6 @@
-
 #!/bin/bash
 
-cd ~/Documents/My_Stuff/c_projects
+cd $HOME/Documents/My_Stuff/c_projects
 
 # List all directories in the current directory
 dirs=(*/)
@@ -14,7 +13,7 @@ for i in "${!dirs[@]}"; do
 done
 
 # Use rofi to display the menu and prompt the user to select a project
-selected_project=$(echo -e "$project_list" | rofi -l 20 -dmenu -p "Select a project:" | awk '{gsub(/\./,""); print $1}')
+selected_project=$(echo -e "$project_list" | rofi -l 18 -dmenu -p "Select a project:" | awk '{gsub(/\./,""); print $1}')
 
 # Check if the selection is empty
 if [[ -z $selected_project ]]; then

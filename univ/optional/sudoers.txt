@@ -1,3 +1,0 @@
-sudo visudo
-
-zed ALL=(ALL) NOPASSWD: /usr/sbin/reboot,/usr/sbin/shutdown,/usr/bin/mount,/usr/bin/umount

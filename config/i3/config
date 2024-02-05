@@ -12,8 +12,8 @@ exec_always --no-startup-id ~/.config/i3/autostart.sh
 
 set $mod Mod4
 set $alt Mod1 
-set $g_inner 6
-set $g_outer 3
+set $g_inner 3
+set $g_outer 1
 smart_borders on
 ######################################
 #             Theme
@@ -50,6 +50,12 @@ bindsym $alt+Shift+e layout toggle split
 # Browser
 bindsym $mod+w exec chromium
 
+# Focus parent container
+bindsym $mod+m focus parent
+
+# Focus last floating/tiling container
+bindsym $mod+g focus mode_toggle
+
 #####################################
 #       Floating, Scratchpad
 
@@ -57,14 +63,20 @@ bindsym $mod+w exec chromium
 for_window [title="dropdown"] floating enable
 for_window [title="dropdown"] resize set 800 650
 for_window [title="dropdown"] move scratchpad
-for_window [title="dropdown"] border pixel 5
+for_window [title="dropdown"] border pixel 4
 bindsym $mod+Shift+Return [title="dropdown"] scratchpad show; move position center
 
 for_window [title="timer"] floating enable
 for_window [title="timer"] resize set 1200 850
 for_window [title="timer"] move scratchpad
-for_window [title="timer"] border pixel 5
+for_window [title="timer"] border pixel 4
 bindsym $mod+Shift+BackSpace [title="timer"] scratchpad show; move position center
+
+for_window [title="calculator"] floating enable
+for_window [title="calculator"] resize set 400 200
+for_window [title="calculator"] move scratchpad
+for_window [title="calculator"] border pixel 4
+bindsym $alt+BackSpace [title="calculator"] scratchpad show; move position center
 
 # Set Kitty to floating mode and move to top-left with increased height (for listing projects)
 for_window [class="KittyC"] floating enable, move position 0 28, resize set 25 ppt 96 ppt
@@ -72,22 +84,19 @@ for_window [class="KittyC"] floating enable, move position 0 28, resize set 25 p
 # Set Kitty to floating mode (for sftp)
 for_window [class="KittySftp"] floating enable, move position center, resize set 60 ppt 40 ppt
 
-# Open sxiv in fullscreen mode
-for_window [class="Sxiv"] fullscreen
-
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="gnome-disks"] floating enable border pixel 1
+for_window [class="dosbox"] floating disable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
 for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
-for_window [class="Todo"] floating enable, resize set 600 600, move position center
+for_window [class="Todo"] floating enable, resize set 800 800, move position center
 for_window [class="mpv"] floating enable, resize set 1000 1000, move position center
-for_window [class="qBittorrent"] floating enable sticky enable border normal
-
+for_window [class="qBittorrent"] floating enable border normal
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 

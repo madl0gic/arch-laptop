@@ -2,6 +2,10 @@
 
 xdg-user-dirs-update
 
+# Installing dependencies for Ly Console Manager (uncomment if you don't want LightDm)
+# yay -S ly
+# sudo systemctl enable ly.service
+
 # Installing dependencies for LightDM Console Manager
 sudo pacman -S lightdm lightdm-gtk-greeter --noconfirm
 sudo systemctl enable lightdm

@@ -123,31 +123,33 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias v='nvim'
 alias h='htop'
+alias py='bpython'
+alias t='timer'
 alias r='ranger'
-alias d='bash ~/.config/scripts/set-double-display.sh'
-alias s='bash ~/.config/scripts/set-single-display.sh'
 alias l='bash ~/.config/scripts/leetcode/create_solution_file.sh'
 alias lg='bash ~/.config/scripts/leetcode/add_leetcode_problem_to_website.sh'
 # alias c='bash ~/.config/scripts/c/compile.sh'
 alias c='gcc -Wall -Wextra -lm main.c
 ./a.out'
-alias za='cd ~/Documents/github/zedsalim/arch-z/'
 alias sts='git status'
 alias add='git add .'
 alias cmt='git commit -m'
 alias push='git push'
 alias pi='sudo pacman -S'
-alias pu='sudo pacman -Sy'
+alias pu='sudo pacman -Syu'
 alias up='fusermount -u ~/phone_mount'
 alias mp='jmtpfs ~/phone_mount'
+alias caps='setxkbmap -option "caps:escape"'
+alias speed='xset r rate 300 50'
+alias 9='timer 90'
+alias dls='docker ps -a'
+
 ufetch
 ##-----------------------------------------------------
 ## synth-shell-prompt.sh
 if [ -f ~/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
     source ~/.config/synth-shell/synth-shell-prompt.sh
 fi
-
-alias sl='ssh server@192.168.1.33'
 
 cmg() {
     git add .
@@ -158,6 +160,7 @@ lzg() {
     git commit -m "$1"
     git push
 }
+
 fc() { du -a ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR;}
 
 export EDITOR=nvim

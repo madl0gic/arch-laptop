@@ -1,5 +1,17 @@
-super + shift + h
-  zathura "$HOME/.config/guide.pdf"
+F1
+  ibus engine xkb:fr:latin9:fra
+
+alt + F1
+   /home/zed/.config/scripts/chromium.sh
+
+alt + F2
+   /home/zed/.config/scripts/htop.sh
+
+# alt + F3
+#   /home/zed/.config/scripts/discord.sh
+
+#alt + F4
+#   /home/zed/.config/scripts/telegram.sh
 
 alt + x
   kitty -e "vifm" ~/Documents/Watch
@@ -37,17 +49,11 @@ alt + shift + u
 alt + d 
 	kitty --class KittySftp -e ~/.config/scripts/yt-downloader.sh
 
+alt + shift + d 
+	kitty --class KittySftp -e ~/.config/scripts/yt-downloader-mp3.sh
+
 alt + shift + y
 	sudo /home/zed/.config/scripts/web_blocker.sh
-
-alt + z 
-	~/.config/scripts/bookmark_pdf.sh
-
-alt + m 
-	~/Documents/My_Stuff/sftp_m.sh
-
-alt + t 
-	~/Documents/My_Stuff/sftp_s.sh
 
 alt + p 
   pavucontrol
